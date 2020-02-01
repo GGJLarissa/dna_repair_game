@@ -1,0 +1,10 @@
+Bg: #441650
+
+
+A Green: #37c871
+
+T Magenta: #c837ab
+
+C Red: #ff2a2a
+
+G Blue: #5fbcd3
