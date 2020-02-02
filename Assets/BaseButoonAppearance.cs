@@ -11,7 +11,9 @@ public class BaseButoonAppearance : MonoBehaviour
     public Color color;
 
     public int id;
-    
+    public Sprite tx2d;
+
+    public Sprite tx3d;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class BaseButoonAppearance : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
+        // Debug.Log(other.name);
     }
 
     private void OnMouseDown()
@@ -31,8 +33,9 @@ public class BaseButoonAppearance : MonoBehaviour
         label = newLabel.ToString();
 
         this.gameObject.GetComponentInChildren<SpriteRenderer>().color = DnaSequenceGenerator.getBaseColor(newLabel);
+        
+        this.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = ((label.Equals("A") || label.Equals("T")) ? tx2d : tx3d);
     }
-    
     // Update is called once per frame
     void Update()
     {

@@ -13,21 +13,23 @@ public class ListBehaviour : MonoBehaviour
 
     private float mistakeRate = 0.3f;
 
-    private bool[] _correct;
+    public bool[] correct;
 
     public Sprite tx2d;
 
     public Sprite tx3d;
 
-    private int _size = 1000;
-    
+    private int _size = 100;
+
+    public Dictionary<int, String[]> pairs;
+
     // Start is called before the first frame update
     void Start()
     {
         _dnaSequenceGenerator = new DnaSequenceGenerator();
         char[] bases = _dnaSequenceGenerator.GenerateSequence(_size);
-        _correct = new bool[_size];
-        
+        correct = new bool[_size];
+        pairs = new Dictionary<int, String[]>();
         for( var i =0; i < bases.Length; i ++)
         {
             bool isWrong = Random.value <= mistakeRate;
@@ -51,7 +53,8 @@ public class ListBehaviour : MonoBehaviour
             
             c.transform.parent = this.gameObject.transform;
 
-            this._correct[i] = isWrong;
+            correct[i] = isWrong;
+            pairs[i] = new string[] {bases[i].ToString(), match.ToString()};
         }
     }
 

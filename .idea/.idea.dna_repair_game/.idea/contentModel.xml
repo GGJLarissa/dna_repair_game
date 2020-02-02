@@ -13,6 +13,7 @@
           <e p="Colors.txt" t="Include" />
         </e>
         <e p="ListBehaviour.cs" t="Include" />
+        <e p="ScoreCheckBehaviour.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
