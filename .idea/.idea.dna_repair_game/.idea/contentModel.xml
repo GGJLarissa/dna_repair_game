@@ -9,6 +9,7 @@
         <e p="BaseButoonAppearance.cs" t="Include" />
         <e p="BaseLabelBehaviour.cs" t="Include" />
         <e p="DnaSequenceGenerator.cs" t="Include" />
+        <e p="GoToScene.cs" t="Include" />
         <e p="GraphicsGuide" t="Include">
           <e p="Colors.txt" t="Include" />
         </e>
@@ -42,6 +43,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="TotalScore.cs" t="Include" />
       </e>
       <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="dna_repair_game.sln" t="IncludeFlat" />
